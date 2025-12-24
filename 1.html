@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helpful Resources</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(270deg,#6a11cb,#2575fc,#ff512f);
+    background-size:600% 600%;
+    animation:bg 12s ease infinite;
+    padding:40px 15px;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+h1{
+    text-align:center;
+    color:#fff;
+    margin-bottom:40px;
+    letter-spacing:1.5px;
+}
+
+/* ===== GROUP BOX ===== */
+.group{
+    max-width:1100px;
+    margin:0 auto 40px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(14px);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
+    animation:fadeUp 1s ease;
+}
+
+.group h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+/* ===== GRID INSIDE GROUP ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:rgba(255,255,255,0.18);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    transition:0.45s ease;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+    transform:translateX(-100%);
+    transition:0.7s;
+}
+.card:hover::before{
+    transform:translateX(100%);
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.05);
+    box-shadow:0 18px 40px rgba(0,0,0,0.45);
+}
+
+.card span{
+    display:inline-block;
+    margin-bottom:10px;
+    padding:5px 14px;
+    border-radius:20px;
+    font-size:0.75rem;
+    font-weight:600;
+}
+
+.yt{background:#ff0000;}
+.ig{background:#e1306c;}
+.web{background:#00c853;}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    font-size:0.95rem;
+    opacity:0.9;
+}
+
+/* ===== BUTTON ===== */
+.card a{
+    display:inline-block;
+    margin-top:16px;
+    padding:10px 22px;
+    border-radius:30px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.35s;
+}
+
+.btn-yt{background:#ff0000;}
+.btn-ig{background:#e1306c;}
+.btn-web{background:#00c853;}
+
+.card a:hover{
+    background:#fff;
+    color:#000;
+    transform:scale(1.08);
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<h1>🔗 Helpful Resources 🔗</h1>
+
+<!-- ========== GROUP 1 ========== -->
+<div class="group">
+    <h2>📘 HTML Learning</h2>
+    <div class="grid">
+
+        <div class="card">
+            <span class="yt">YouTube</span>
+            <h3>HTML Basics</h3>
+            <p>Complete HTML video tutorial</p>
+            <a href="https://youtube.com" target="_blank" class="btn-yt">Watch</a>
+        </div>
+
+        <div class="card">
+            <span class="ig">Instagram</span>
+            <h3>HTML Tips</h3>
+            <p>Quick HTML reels & tricks</p>
+            <a href="https://instagram.com" target="_blank" class="btn-ig">View</a>
+        </div>
+
+        <div class="card">
+            <span class="web">Website</span>
+            <h3>HTML Docs</h3>
+            <p>Official HTML documentation</p>
+            <a href="https://developer.mozilla.org" target="_blank" class="btn-web">Visit</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========== GROUP 2 ========== -->
+<div class="group">
+    <h2>🎨 CSS Learning</h2>
+    <div class="grid">
+
+        <div class="card">
+            <span class="yt">YouTube</span>
+            <h3>CSS Full Course</h3>
+            <p>CSS from beginner to advanced</p>
+            <a href="https://youtube.com" target="_blank" class="btn-yt">Watch</a>
+        </div>
+
+        <div class="card">
+            <span class="ig">Instagram</span>
+            <h3>CSS Animations</h3>
+            <p>Beautiful CSS animation reels</p>
+            <a href="https://instagram.com" target="_blank" class="btn-ig">View</a>
+        </div>
+
+        <div class="card">
+            <span class="web">Website</span>
+            <h3>CSS Tricks</h3>
+            <p>Best CSS tips & guides</p>
+            <a href="https://css-tricks.com" target="_blank" class="btn-web">Visit</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
