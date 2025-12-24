@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Helpful Videos</title>
+<title>Helpful Links</title>
 
 <style>
 /* ===== RESET ===== */
@@ -25,17 +25,17 @@ body{
     align-items:center;
 }
 
-/* ===== BACKGROUND ANIMATION ===== */
+/* ===== BACKGROUND ===== */
 @keyframes bgAnimation{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-/* ===== MAIN CONTAINER ===== */
+/* ===== CONTAINER ===== */
 .container{
     width:90%;
-    max-width:1000px;
+    max-width:1100px;
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(16px);
     border-radius:22px;
@@ -44,7 +44,7 @@ body{
     animation:fadeUp 1.2s ease;
 }
 
-/* ===== HEADING ===== */
+/* ===== TITLE ===== */
 h1{
     text-align:center;
     color:#fff;
@@ -55,7 +55,7 @@ h1{
 /* ===== GRID ===== */
 .links{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
@@ -71,7 +71,7 @@ h1{
     transition:0.45s ease;
 }
 
-/* ===== SHINE EFFECT ===== */
+/* ===== SHINE ===== */
 .card::before{
     content:"";
     position:absolute;
@@ -82,7 +82,6 @@ h1{
     background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
     transition:0.7s;
 }
-
 .card:hover::before{
     left:100%;
 }
@@ -93,46 +92,58 @@ h1{
     box-shadow:0 18px 40px rgba(0,0,0,0.45);
 }
 
-/* ===== CARD TEXT ===== */
+/* ===== TEXT ===== */
 .card h3{
-    margin-bottom:10px;
+    margin-bottom:6px;
     font-size:1.3rem;
 }
-
 .card p{
     font-size:0.95rem;
     opacity:0.9;
 }
+
+/* ===== TAG ===== */
+.tag{
+    display:inline-block;
+    margin-bottom:12px;
+    padding:5px 14px;
+    border-radius:20px;
+    font-size:0.75rem;
+    font-weight:600;
+}
+
+/* ===== TAG COLORS ===== */
+.youtube{ background:#ff0000; }
+.insta{ background:#e1306c; }
+.web{ background:#00c853; }
 
 /* ===== BUTTON ===== */
 .card a{
     display:inline-block;
     margin-top:18px;
     padding:11px 22px;
-    background:#ff0000;
+    border-radius:30px;
     color:#fff;
     text-decoration:none;
-    border-radius:30px;
     font-weight:600;
     transition:0.35s;
 }
 
+/* ===== BUTTON COLORS ===== */
+.btn-youtube{ background:#ff0000; }
+.btn-insta{ background:#e1306c; }
+.btn-web{ background:#00c853; }
+
 .card a:hover{
     background:#fff;
-    color:#ff0000;
+    color:#000;
     transform:scale(1.08);
 }
 
-/* ===== FADE UP ===== */
+/* ===== FADE ===== */
 @keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{ opacity:0; transform:translateY(50px); }
+    to{ opacity:1; transform:translateY(0); }
 }
 </style>
 </head>
@@ -140,44 +151,58 @@ h1{
 <body>
 
 <div class="container">
-    <h1>🎯 Helpful Videos 🎯</h1>
+    <h1>🔗 Helpful Links 🔗</h1>
 
     <div class="links">
 
+        <!-- YOUTUBE -->
         <div class="card">
-            <h3>HTML Basics</h3>
-            <p>Helpful videos to learn HTML from zero level</p>
-            <a href="https://youtube.com" target="_blank">Watch Now</a>
+            <span class="tag youtube">YouTube</span>
+            <h3>How to Start a Laptop</h3>
+            <p>Helpful YouTube videos to learn Using laptop</p>
+            <a href="https://youtu.be/t0A2u5UJIUQ?si=4zvOdjh1GXDvIwM3" target="_blank" 
+                class="btn-youtube">Watch on YouTube</a>
+        </div>
+
+        <!-- INSTAGRAM -->
+        <div class="card">
+            <span class="tag insta">Instagram</span>
+            <h3>CSS Tips</h3>
+            <p>Helpful Instagram reels for CSS tricks</p>
+            <a href="https://instagram.com" target="_blank" class="btn-insta">View on Instagram</a>
+        </div>
+
+        <!-- WEBSITE -->
+        <div class="card">
+            <span class="tag web">Website</span>
+            <h3>JavaScript Docs</h3>
+            <p>Helpful website for JavaScript learning</p>
+            <a href="https://developer.mozilla.org" target="_blank" class="btn-web">Visit Website</a>
+        </div>
+
+        <!-- ========  =======  ========   ==========   ================ ================ ================ ============ -->
+
+        <!-- MORE -->
+        <div class="card">
+            <span class="tag youtube">YouTube</span>
+            <h3>Computer </h3>
+            <p>How to start computert</p>
+            <a href="https://youtu.be/TH_HuHyCu5c?si=0ABne2twx0r5C-aw" target="_blank" 
+            class="btn-youtube">Watch on YouTube</a>
         </div>
 
         <div class="card">
-            <h3>CSS Styling</h3>
-            <p>Helpful videos for CSS design & layouts</p>
-            <a href="https://youtube.com" target="_blank">Watch Now</a>
+            <span class="tag insta">Instagram</span>
+            <h3>JavaScript Shorts</h3>
+            <p>Quick JS learning reels</p>
+            <a href="https://instagram.com" target="_blank" class="btn-insta">View on Instagram</a>
         </div>
 
         <div class="card">
-            <h3>CSS Animations</h3>
-            <p>Helpful videos for smooth & modern animations</p>
-            <a href="https://youtube.com" target="_blank">Watch Now</a>
-        </div>
-
-        <div class="card">
-            <h3>JavaScript Basics</h3>
-            <p>Helpful videos to understand JavaScript step by step</p>
-            <a href="https://youtube.com" target="_blank">Watch Now</a>
-        </div>
-
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>Helpful videos for complete web dev journey</p>
-            <a href="https://youtube.com" target="_blank">Watch Now</a>
-        </div>
-
-        <div class="card">
-            <h3>YouTube Shorts</h3>
-            <p>Helpful short videos for quick learning</p>
-            <a href="https://youtube.com" target="_blank">Watch Now</a>
+            <span class="tag web">Website</span>
+            <h3>FreeCodeCamp</h3>
+            <p>Best free coding learning platform</p>
+            <a href="https://freecodecamp.org" target="_blank" class="btn-web">Visit Website</a>
         </div>
 
     </div>
